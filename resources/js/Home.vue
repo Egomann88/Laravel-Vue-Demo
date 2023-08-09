@@ -2,5 +2,5 @@
 </script>
 
 <template>
-    <h1> HomeView </h1>
+    <h1 class="bg-gray-200 h-screen"> HomeView - With Tailwind CSS </h1>
 </template>
