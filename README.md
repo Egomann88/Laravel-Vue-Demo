@@ -1,3 +1,24 @@
+<h1>Installing </h1>
+
+<li>
+    Start Laragon and connect database
+</li>
+<li>
+    <a href="https://blog.logrocket.com/create-single-page-app-laravel-and-vue/" target="_blank">Install VueJs in Laravel</a>
+</li>
+
+<h2>Running</h2>
+<li>
+    Connect Laragon database
+</li>
+<li>
+    Start <code>php artisan serve</code>
+    and <code>npm run dev</code>
+    in seperate terminals
+</li>
+
+<hr />
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
