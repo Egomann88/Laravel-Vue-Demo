@@ -8,4 +8,23 @@ use Illuminate\Database\Eloquent\Model;
 class Card extends Model
 {
     use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'name',
+        'entryYear',
+        'rarity',
+        'isActive',
+        'cardImg',
+        'specialization',
+        'age',
+        'isSpecial',
+        'biography',
+    ];
+
+
 }
