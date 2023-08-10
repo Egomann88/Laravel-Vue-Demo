@@ -26,5 +26,15 @@ class Card extends Model
         'biography',
     ];
 
-
+    /**
+     * The model's default values for attributes.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'entryYear' => now()->year,
+        'isActive' => true,
+        'cardImg' => 'none.jpg',
+        'isSpecial' => false,
+    ];
 }
