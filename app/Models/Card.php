@@ -32,7 +32,6 @@ class Card extends Model
      * @var array
      */
     protected $attributes = [
-        'entryYear' => now()->year,
         'isActive' => true,
         'cardImg' => 'none.jpg',
         'isSpecial' => false,
