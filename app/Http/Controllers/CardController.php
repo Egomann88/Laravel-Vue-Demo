@@ -44,11 +44,13 @@ class CardController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         // validation is not implemented yet
         $card = Card::create($request->all());
+        $card = CardResource::make($card);
 
         return response()->json(['data' => $card], 201);
     }
@@ -58,7 +60,10 @@ class CardController extends Controller
      */
     public function show(string $id)
     {
-        return response()->json(['data' => Card::find($id)]);
+        $card = Card::find($id);
+        $card = CardResource::make($card);
+
+        return response()->json(['data' => $card]);
     }
 
     /**
@@ -77,6 +82,7 @@ class CardController extends Controller
         // validation is not implemented yet
         $card = Card::find($id);
         $card->update($request->all());
+        $card = CardResource::make($card);
 
         return response()->json(['data' => $card], 200);
     }
