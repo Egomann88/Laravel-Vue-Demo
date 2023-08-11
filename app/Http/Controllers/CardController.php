@@ -70,6 +70,6 @@ class CardController extends Controller
     {
         Card::find($id)->delete();
 
-        return response()->json([], 204);
+        return response()->json(['data' => null], 204);
     }
 }
