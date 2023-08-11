@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\CardResource;
 use App\Models\Card;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,11 @@ class CardController extends Controller
      */
     public function index()
     {
-        return response()->json(['data' => Card::get()]);
+        // from lowest to highest rarity
+        $card = Card::get()->sortBy('rarity');
+        $card = CardResource::collection($card);
+
+        return response()->json(['data' => $card]);
     }
 
     /**
