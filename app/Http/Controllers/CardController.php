@@ -22,6 +22,16 @@ class CardController extends Controller
     }
 
     /**
+     * Display a listing of a specific rarity.
+     */
+    public function indexRarity(string $rarity) {
+        $card = Card::where('rarity', $rarity)->get();
+        $card = CardResource::collection($card);
+
+        return response()->json(['data' => $card]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()
