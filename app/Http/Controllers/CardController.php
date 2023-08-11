@@ -28,7 +28,8 @@ class CardController extends Controller
      * Display a listing of a specific rarity.
      * @return \Illuminate\Http\Response
      */
-    public function indexRarity(string $rarity) {
+    public function indexRarity(string $rarity)
+    {
         $card = Card::where('rarity', $rarity)->get();
         $card = CardResource::collection($card);
 
@@ -39,7 +40,8 @@ class CardController extends Controller
      * Display a listing of all active cards.
      * @return \Illuminate\Http\Response
      */
-    public function indexActive() {
+    public function indexActive()
+    {
         $card = Card::where('isActive', true)->get();
         $card = CardResource::collection($card);
 
