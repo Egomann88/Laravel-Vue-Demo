@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\CardAllInfoResource;
 use App\Http\Resources\CardResource;
 use App\Models\Card;
 use Illuminate\Http\Request;
@@ -72,7 +73,7 @@ class CardController extends Controller
     public function show(string $id)
     {
         $card = Card::find($id);
-        $card = CardResource::make($card);
+        $card = CardAllInfoResource::make($card);
 
         return response()->json(['data' => $card]);
     }
