@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User_cards;
 use App\Models\Card;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -22,6 +23,17 @@ class DatabaseSeeder extends Seeder
         // ]);
         User::factory(10)->create();
         Card::factory(10)->create();
+
+        for($i = 1; $i <= 10; $i++) {
+            for($j = 1; $j <= 10; $j++) {
+                User_cards::factory()->create([
+                    'user_id' => $i,
+                    'card_id' => $j,
+                    'quantity' => rand(1, 100),                    
+                ]);
+            }
+        }
+
     }
 }
     
