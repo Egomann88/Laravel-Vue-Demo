@@ -78,13 +78,16 @@ class CardController extends Controller
      * Store a newly created resource in storage.
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CardRequest $request)
     {
+        return $request;
+        /*
         // validation is not implemented yet
-        $card = Card::create($request->all());
+        $card = Card::create($request->validated()->all());
         $card = CardResource::make($card);
 
         return response()->json(['data' => $card], 201);
+        */
     }
 
     /**
