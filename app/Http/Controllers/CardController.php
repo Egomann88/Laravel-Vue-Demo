@@ -11,6 +11,8 @@ class CardController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * Sort by rarity from lowest.
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -23,6 +25,7 @@ class CardController extends Controller
 
     /**
      * Display a listing of a specific rarity.
+     * @return \Illuminate\Http\Response
      */
     public function indexRarity(string $rarity) {
         $card = Card::where('rarity', $rarity)->get();
