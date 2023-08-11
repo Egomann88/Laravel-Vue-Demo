@@ -35,6 +35,17 @@ class CardController extends Controller
     }
 
     /**
+     * Display a listing of all active cards.
+     * @return \Illuminate\Http\Response
+     */
+    public function indexActive() {
+        $card = Card::where('isActive', true)->get();
+        $card = CardResource::collection($card);
+
+        return response()->json(['data' => $card]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()
