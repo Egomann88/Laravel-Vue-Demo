@@ -49,6 +49,24 @@ class CardController extends Controller
     }
 
     /**
+     * Display a listing of all cards that have the query string in their name, including fuzzy search.
+     * If the query string is empty, return all cards.
+     * @param string $query The query string to search for.
+     * @return \Illuminate\Http\Response
+     */
+    public function indexSearch(string $query = '')
+    {
+        if ($query === '') {
+            return $this->index();
+        }
+
+        $cards = Card::where('name', 'like', '%' . $query . '%')->get();
+        $cardResources = CardResource::collection($cards);
+
+        return response()->json(['data' => $cardResources]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()

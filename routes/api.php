@@ -24,6 +24,7 @@ Route::prefix('/cards')->controller(CardController::class)->group(function () {
     Route::get('/', 'index');
     Route::get('/rarity/{rarity}', 'indexRarity');
     Route::get('/active', 'indexActive');
+    Route::get('/search/{query?}', 'indexSearch');
     Route::get('/create', 'create');
     Route::post('/', 'store');
     Route::get('/{id}', 'show');
