@@ -2,12 +2,17 @@
 
 namespace App\Models;
 
+use App\Models\User_cards;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Card extends Model
 {
     use HasFactory;
+
+    public function users_cards() {
+        return $this->belongsToMany(User_cards::class);
+    }
 
     /**
      * The attributes that are mass assignable.
