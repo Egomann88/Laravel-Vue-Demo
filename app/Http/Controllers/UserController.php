@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Card;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -31,9 +32,28 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // validation is not implemented yet
-        $user = User::create($request->all());
+        $user = User::create([
+            'isActive' => $request->isActiveUser,
+            'isAdmin' => $request->isAdmin,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
 
-        return response()->json(['data' => $user], 201);
+        // card is created when a user is created
+        // validation is not implemented yet
+        $card = Card::create([
+            'name' => $request->name,
+            'entryYear' => $request->entryYear,
+            'rarity' => $request->rarity,
+            'isActive' => $request->isActiveCard,
+            'cardImg' => $request->cardImg,
+            'specialization' => $request->specialization,
+            'age' => $request->age,
+            'isSpecial' => $request->isSpecial,
+            'biography' => $request->biography,
+        ]);
+
+        return response()->json(['data' => [$user, $card]], 201);
     }
 
     /**
