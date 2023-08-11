@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Card;
 use Illuminate\Http\Request;
 
 class CardController extends Controller
@@ -12,7 +13,7 @@ class CardController extends Controller
      */
     public function index()
     {
-        return response()->json(['data' => 'index method']);
+        return response()->json(['data' => Card::get()]);
     }
 
     /**
@@ -28,7 +29,10 @@ class CardController extends Controller
      */
     public function store(Request $request)
     {
-        return response()->json(['data' => 'store method']);
+        // validation is not implemented yet
+        $card = Card::create($request->all());
+
+        return response()->json(['data' => $card], 201);
     }
 
     /**
@@ -36,7 +40,7 @@ class CardController extends Controller
      */
     public function show(string $id)
     {
-        return response()->json(['data' => 'show method']);
+        return response()->json(['data' => Card::find($id)]);
     }
 
     /**
@@ -52,7 +56,11 @@ class CardController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        return response()->json(['data' => 'update method']);
+        // validation is not implemented yet
+        $card = Card::find($id);
+        $card->update($request->all());
+
+        return response()->json(['data' => $card], 200);
     }
 
     /**
@@ -60,6 +68,8 @@ class CardController extends Controller
      */
     public function destroy(string $id)
     {
-        return response()->json(['data' => 'destroy method']);
+        Card::find($id)->delete();
+
+        return response()->json([], 204);
     }
 }
