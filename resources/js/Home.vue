@@ -8,10 +8,10 @@
         <!-- news / banners -->
         <!-- gacha -->
         <!-- <img src="./banner.jpg" class="absolute opacity-50 w-[100vw] h-[100vh]" /> -->
-        <div class="bgImgCluster min-h-screen">
+        <div class="bgImgCluster min-h-screen px-8">
             <!-- top line -->
             <div class="grid grid-cols-12 h-16">
-                <div class="col-span-3 mx-8 my-auto flex">
+                <div class="col-span-3 my-auto flex">
                     <img src="./logo.png" class="w-16 h-16" />
                     <h2 class="text-2xl mx-4 my-auto">Gacha</h2>
                 </div>
@@ -43,9 +43,9 @@
                 <div class="w-4/5 mx-auto">
                     <!-- padding in grid -->
                     <div class="bgImgBanner bg-gray-200 rounded-xl">
-                        <div class="grid grid-cols-6 h-full">
+                        <div class="grid grid-cols-6 h-full px-14">
                             <!-- left part - desc -->
-                            <div class="col-span-3 px-14">
+                            <div class="col-span-3">
                                 <div class="w-[85%]">
                                     <!-- Tilte of Card -->
                                     <div class="my-8">
@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                             <!-- right part - character -->
-                            <div class="col-span-3 px-14">
+                            <div class="col-span-3">
                                 <!-- card div on top -->
                                 <div class="mx-auto my-4 w-[320px] h-[480px] bg-black">
                                     -- Hier kommt die Karte hin --
@@ -107,14 +107,15 @@
                 </div>
             </div>
             <!-- Details and Pull buttons -->
-            <div class="grid grid-cols-6 px-8">
-                <div class="col-span-3 my-auto">
-                    <button
-                        class="bg-slate-200 text-lg font-semibold py-1 px-12 rounded-2xl hover:bg-slate-300 transform-gpu duration-100">
+            <div class="grid grid-cols-6 my-8">
+                <div class="col-span-1 my-auto">
+                    <button class="bg-slate-200 text-lg font-semibold py-1 px-12 rounded-3xl border-2 border-slate-400
+                        hover:border-slate-800 transform-gpu duration-100
+                        active:border-slate-400 active:text-white active:bg-slate-500">
                         Details
                     </button>
                 </div>
-                <div class="col-span-3 flex">
+                <div class="col-span-5 flex justify-end">
                     <button
                         class="mx-4 px-12 py-4 bg-neutral-100 border-2 border-yellow-500 rounded-full text-xl font-semibold text-yellow-700 transform-gpu duration-300 hover:bg-neutral-300">1x
                         ziehen</button>
