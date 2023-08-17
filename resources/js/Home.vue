@@ -6,6 +6,39 @@
     <div class="min-h-screen">
         <h1>Home</h1>
         <!-- news / banners -->
+        <div class="bgImgCluster px-8">
+            <div class="w-full mx-auto">
+                <div class="grid grid-cols-6">
+                    <div class="col-span-6 lg:col-span-2 h-fit bg-neutral-100 rounded-xl my-8 lg:my-auto px-8 py-4">
+                        <h1 class="text-5xl font-bold my-4"><span class="text-violet-700">Neue / Limitierte</span> Karten
+                        </h1>
+                        <div class="border-dotted border-2 border-gray-600"></div>
+                        <div class="text-xl font-semibold text-justify my-4">
+                            <!-- neue karten text -->
+                            Deine Sammlung ist nicht mehr vollständig? Dann ist jetzt die Chance! Ziehe die neuen Karten so
+                            lange sie verfügbar sind.
+                            <!-- bald deaktivierte karten text -->
+                            <!-- Die folgenden Karten werden bald deaktiviert. Nutze die Chance, um deine Sammlung zu
+                            vervollständigen, bevor sie nicht mehr verfügbar sind. -->
+                            <!-- limitierte Karten text -->
+                            <!-- Der neue limiterte Banner bietet die Möglichkeit auf limitierte Karten. Diese sind nur für eine begrenzte Zeit verfügbar.
+                            Nutze die Chance, um deine Sammlung zu vervollständigen.  -->
+                            <br />
+                            Wähle "Details", um mehr zu erfahren.
+                        </div>
+                    </div>
+                    <div class="col-span-6 lg:col-span-4 flex justify-around py-8">
+                        <div class="w-[320px] h-[480px] bg-black mx-4">
+                            -- Hier kommt die Karte hin --
+                        </div>
+                        <div class="hidden md:block w-[320px] h-[480px] bg-black mx-4">
+                            -- Hier kommt die Karte hin --
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- gacha -->
         <!-- <img src="./banner.jpg" class="absolute opacity-50 w-[100vw] h-[100vh]" /> -->
         <div class="bgImgCluster min-h-screen px-8">
