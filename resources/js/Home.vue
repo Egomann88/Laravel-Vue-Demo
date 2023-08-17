@@ -173,12 +173,9 @@
                     </button>
                 </div>
                 <div class="col-span-5 flex justify-end">
-                    <button class="pullBtn">1x
-                        ziehen</button>
-                    <button class="pullBtn">10x
-                        ziehen</button>
-                    <button class="pullBtn">Bis
-                        5-Sterne ziehen</button>
+                    <button class="pullBtn">1x ziehen</button>
+                    <button class="pullBtn">10x ziehen</button>
+                    <button class="pullBtn">Bis 5-Sterne ziehen</button>
                 </div>
             </div>
         </div>
@@ -201,6 +198,6 @@
 }
 
 .pullBtn {
-    @apply mx-4 px-12 py-4 bg-neutral-100 border-2 border-yellow-500 rounded-full text-xl font-semibold text-yellow-700 transform-gpu duration-300 active:bg-orange-100;
+    @apply mx-4 px-16 py-6 bg-neutral-100 border-2 border-yellow-500 rounded-full text-xl font-semibold text-yellow-700 transform-gpu duration-300 active:bg-orange-100;
 }
 </style>
