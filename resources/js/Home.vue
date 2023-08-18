@@ -41,7 +41,7 @@
 
         <!-- gacha -->
         <!-- <img src="./banner.jpg" class="absolute opacity-50 w-[100vw] h-[100vh]" /> -->
-        <div class="bgImgCluster min-h-screen px-8">
+        <div class="bgImgCluster min-h-screen px-2 lg:px-8">
             <!-- top line -->
             <div class="grid grid-cols-12 h-16 my-8">
                 <div class="col-span-3 my-auto flex">
@@ -103,7 +103,7 @@
                         <div class="grid grid-cols-6 h-full px-14">
                             <!-- left part - desc -->
                             <div class="col-span-3">
-                                <div class="w-[85%]">
+                                <div class="w-[95%] lg:w-[85%]">
                                     <!-- Tilte of Card -->
                                     <div class="my-8">
                                         <h1 class="text-5xl font-bold">Kliste nich drauf, biste 'n komischer <span
@@ -146,7 +146,7 @@
                                     -- Hier kommt die Karte hin --
                                 </div>
                                 <!-- name and description -->
-                                <div class="bg-violet-800 bg-opacity-75 relative my-11 px-4 w-[380px] h-16">
+                                <div class="bg-violet-800 bg-opacity-75 relative my-11 px-4 w-[320px] lg:w-[380px] h-16">
                                     <div class="w-[350px] absolute -mt-8">
                                         <h1 class="text-3xl">Name der Karte dfde daa da</h1>
                                     </div>
@@ -172,7 +172,7 @@
                         Details
                     </button>
                 </div>
-                <div class="col-span-5 flex justify-end">
+                <div class="col-span-6 lg:col-span-5 flex justify-end my-4">
                     <button class="pullBtn">1x ziehen</button>
                     <button class="pullBtn">10x ziehen</button>
                     <button class="pullBtn">Bis 5-Sterne ziehen</button>
@@ -198,6 +198,6 @@
 }
 
 .pullBtn {
-    @apply mx-4 px-16 py-6 bg-neutral-100 border-2 border-yellow-500 rounded-full text-xl font-semibold text-yellow-700 transform-gpu duration-300 active:bg-orange-100;
+    @apply mx-4 px-8 lg:px-12 xl:px-16 py-6 bg-neutral-100 border-2 border-yellow-500 rounded-full text-xl font-semibold text-yellow-700 transform-gpu duration-200 active:bg-orange-100;
 }
 </style>
